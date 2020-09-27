@@ -3,18 +3,18 @@
 namespace Andreus.Utils
 {
     /// <summary>
-    /// Extensions for <see cref="byte"/>.
+    /// Extensions for <see cref="long"/>.
     /// </summary>
-    public static class ByteExtensions
+    public static class Int64Extensions
     {
         /// <summary>
         /// Converts the string representation of a number in a culture-independent format to its numeric equivalent.
         /// </summary>
         /// <param name="s">A string containing a number to convert.</param>
         /// <returns>A numeric value that is equivalent to the number contained in string.</returns>
-        public static byte ParseInvariant(string s)
+        public static long ParseInvariant(string s)
         {
-            return byte.Parse(s, NumberStyles.Integer, NumberFormatInfo.InvariantInfo);
+            return long.Parse(s, NumberStyles.Integer, NumberFormatInfo.InvariantInfo);
         }
 
         /// <summary>
@@ -27,9 +27,9 @@ namespace Andreus.Utils
         /// or the default value if the conversion failed.
         /// </param>
         /// <returns>True if string was converted successfully, otherwise, false.</returns>
-        public static bool TryParseInvariant(string s, out byte value)
+        public static bool TryParseInvariant(string s, out long value)
         {
-            return byte.TryParse(s, NumberStyles.Integer, NumberFormatInfo.InvariantInfo, out value);
+            return long.TryParse(s, NumberStyles.Integer, NumberFormatInfo.InvariantInfo, out value);
         }
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace Andreus.Utils
         /// </summary>
         /// <param name="value">The numeric value.</param>
         /// <returns>The string representation of the value.</returns>
-        public static string ToStringInvariant(this byte value)
+        public static string ToStringInvariant(this long value)
         {
             return value.ToString(NumberFormatInfo.InvariantInfo);
         }
@@ -50,7 +50,7 @@ namespace Andreus.Utils
         /// <param name="value">The numeric value.</param>
         /// <param name="format">A standard or custom numeric format string.</param>
         /// <returns>The string representation of the value, formatted as specified by the format parameter.</returns>
-        public static string ToStringInvariant(this byte value, string format)
+        public static string ToStringInvariant(this long value, string format)
         {
             return value.ToString(format, NumberFormatInfo.InvariantInfo);
         }
