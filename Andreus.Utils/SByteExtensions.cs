@@ -21,7 +21,7 @@ namespace Andreus.Utils
         /// Converts the string representation of a number in a culture-independent format to its numeric equivalent.
         /// A return value indicates whether the conversion succeeded or failed.
         /// </summary>
-        /// <param name="s">A string containing a number to convert.</param>
+        /// <param name="s">A string that contains a number to convert.</param>
         /// <param name="value">
         /// When this method returns, contains numeric value equivalent to the number contained in a string if the conversion succeeded,
         /// or the default value if the conversion failed.
