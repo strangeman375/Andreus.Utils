@@ -11,7 +11,7 @@ namespace Andreus.Utils
         /// <summary>
         /// Converts the string representation of a time interval in a culture-independent format to its <see cref="TimeSpan"/> equivalent.
         /// </summary>
-        /// <param name="s">A string containing a time interval to convert.</param>
+        /// <param name="s">A string that specifies the time interval to convert.</param>
         /// <returns>A <see cref="TimeSpan"/> value that is equivalent to the time interval contained in string.</returns>
         public static TimeSpan ParseInvariant(string s)
         {
@@ -23,7 +23,7 @@ namespace Andreus.Utils
         /// using the specified format, culture-independent formatting information, and styles.
         /// The format of the string representation must match the specified format exactly.
         /// </summary>
-        /// <param name="s">A string containing a time interval to convert.</param>
+        /// <param name="s">A string that specifies the time interval to convert.</param>
         /// <param name="format">A standard or custom <see cref="TimeSpan"/> format string.</param>
         /// <param name="styles">A bitwise combination of enumeration values that defines the style elements that may be present in string.</param>
         /// <returns>A <see cref="TimeSpan"/> value that is equivalent to the time interval contained in string.</returns>
@@ -37,7 +37,7 @@ namespace Andreus.Utils
         /// using the specified formats, culture-independent formatting information, and styles.
         /// The format of the string representation must match one of the specified formats exactly.
         /// </summary>
-        /// <param name="s">A string containing a time interval to convert.</param>
+        /// <param name="s">A string that specifies the time interval to convert.</param>
         /// <param name="formats">An array of standard or custom <see cref="TimeSpan"/> format strings.</param>
         /// <param name="styles">A bitwise combination of enumeration values that defines the style elements that may be present in string.</param>
         /// <returns>A <see cref="TimeSpan"/> value that is equivalent to the time interval contained in string.</returns>
@@ -50,7 +50,7 @@ namespace Andreus.Utils
         /// Converts the string representation of a time interval in a culture-independent format to its <see cref="TimeSpan"/> equivalent.
         /// A return value indicates whether the conversion succeeded or failed.
         /// </summary>
-        /// <param name="s">A string containing a time interval to convert.</param>
+        /// <param name="s">A string that specifies the time interval to convert.</param>
         /// <param name="value">
         /// When this method returns, contains <see cref="TimeSpan"/> value equivalent to the time interval contained in a string if the conversion succeeded,
         /// or the default value if the conversion failed.
@@ -67,7 +67,7 @@ namespace Andreus.Utils
         /// The format of the string representation must match the specified format exactly.
         /// A return value indicates whether the conversion succeeded or failed.
         /// </summary>
-        /// <param name="s">A string containing a time interval to convert.</param>
+        /// <param name="s">A string that specifies the time interval to convert.</param>
         /// <param name="format">A standard or custom <see cref="TimeSpan"/> format string.</param>
         /// <param name="value">
         /// When this method returns, contains <see cref="TimeSpan"/> value equivalent to the time interval contained in a string if the conversion succeeded,
@@ -86,7 +86,7 @@ namespace Andreus.Utils
         /// The format of the string representation must match one of the specified formats exactly.
         /// A return value indicates whether the conversion succeeded or failed.
         /// </summary>
-        /// <param name="s">A string containing a time interval to convert.</param>
+        /// <param name="s">A string that specifies the time interval to convert.</param>
         /// <param name="formats">An array of standard or custom <see cref="TimeSpan"/> format strings.</param>
         /// <param name="value">
         /// When this method returns, contains <see cref="TimeSpan"/> value equivalent to the time interval contained in a string if the conversion succeeded,

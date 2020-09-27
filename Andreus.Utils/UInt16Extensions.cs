@@ -10,7 +10,7 @@ namespace Andreus.Utils
         /// <summary>
         /// Converts the string representation of a number in a culture-independent format to its numeric equivalent.
         /// </summary>
-        /// <param name="s">A string containing a number to convert.</param>
+        /// <param name="s">A string that contains a number to convert.</param>
         /// <returns>A numeric value that is equivalent to the number contained in string.</returns>
         public static ushort ParseInvariant(string s)
         {

@@ -11,7 +11,7 @@ namespace Andreus.Utils
         /// <summary>
         /// Converts the string representation of a date and time in a culture-independent format to its <see cref="DateTime"/> equivalent.
         /// </summary>
-        /// <param name="s">A string containing a date and time to convert.</param>
+        /// <param name="s">A string that contains a date and time to convert.</param>
         /// <param name="styles">
         /// A bitwise combination of the enumeration values that indicates the style elements that can be present in string for the parse operation to succeed,
         /// and that defines how to interpret the parsed date in relation to the current time zone or the current date.
@@ -27,7 +27,7 @@ namespace Andreus.Utils
         /// using the specified format, culture-independent formatting information, and styles.
         /// The format of the string representation must match the specified format exactly.
         /// </summary>
-        /// <param name="s">A string containing a date and time to convert.</param>
+        /// <param name="s">A string that contains a date and time to convert.</param>
         /// <param name="format">A standard or custom <see cref="DateTime"/> format string.</param>
         /// <param name="styles">
         /// A bitwise combination of the enumeration values that indicates the style elements that can be present in string for the parse operation to succeed,
@@ -44,7 +44,7 @@ namespace Andreus.Utils
         /// using the specified formats, culture-independent formatting information, and styles.
         /// The format of the string representation must match one of the specified formats exactly.
         /// </summary>
-        /// <param name="s">A string containing a date and time to convert.</param>
+        /// <param name="s">A string that contains a date and time to convert.</param>
         /// <param name="formats">An array of standard or custom <see cref="DateTime"/> format strings.</param>
         /// <param name="styles">
         /// A bitwise combination of the enumeration values that indicates the style elements that can be present in string for the parse operation to succeed,
@@ -60,7 +60,7 @@ namespace Andreus.Utils
         /// Converts the string representation of a date and time in a culture-independent format to its <see cref="DateTime"/> equivalent.
         /// A return value indicates whether the conversion succeeded or failed.
         /// </summary>
-        /// <param name="s">A string containing a date and time to convert.</param>
+        /// <param name="s">A string that contains a date and time to convert.</param>
         /// <param name="value">
         /// When this method returns, contains <see cref="DateTime"/> value equivalent to the date and time contained in a string if the conversion succeeded,
         /// or the default value if the conversion failed.
@@ -81,7 +81,7 @@ namespace Andreus.Utils
         /// The format of the string representation must match the specified format exactly.
         /// A return value indicates whether the conversion succeeded or failed.
         /// </summary>
-        /// <param name="s">A string containing a date and time to convert.</param>
+        /// <param name="s">A string that contains a date and time to convert.</param>
         /// <param name="format">A standard or custom <see cref="DateTime"/> format string.</param>
         /// <param name="value">
         /// When this method returns, contains <see cref="DateTime"/> value equivalent to the date and time contained in a string if the conversion succeeded,
@@ -103,7 +103,7 @@ namespace Andreus.Utils
         /// The format of the string representation must match one of the specified formats exactly.
         /// A return value indicates whether the conversion succeeded or failed.
         /// </summary>
-        /// <param name="s">A string containing a date and time to convert.</param>
+        /// <param name="s">A string that contains a date and time to convert.</param>
         /// <param name="formats">An array of standard or custom <see cref="DateTime"/> format strings.</param>
         /// <param name="value">
         /// When this method returns, contains <see cref="DateTime"/> value equivalent to the date and time contained in a string if the conversion succeeded,
