@@ -1,7 +1,31 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.1;netstandard2.0</TargetFrameworks>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="ByteExtensions.cs" />
+    <Compile Include="DateTimeExtensions.cs" />
+    <Compile Include="DateTimeOffsetExtensions.cs" />
+    <Compile Include="DecimalExtensions.cs" />
+    <Compile Include="DoubleExtensions.cs" />
+    <Compile Include="Int16Extensions.cs" />
+    <Compile Include="Int32Extensions.cs" />
+    <Compile Include="Int64Extensions.cs" />
+    <Compile Include="SByteExtensions.cs" />
+    <Compile Include="SingleExtensions.cs" />
+    <Compile Include="Text\IStringBuilderAppendable.cs" />
+    <Compile Include="Text\StringBuilderExtensions.cs" />
+    <Compile Include="TimeSpanExtensions.cs" />
+    <Compile Include="UInt16Extensions.cs" />
+    <Compile Include="UInt32Extensions.cs" />
+    <Compile Include="UInt64Extensions.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
+    <Compile Include="ByteExtensions_netstandard2_1.cs" />
+  </ItemGroup>
 
 </Project>
