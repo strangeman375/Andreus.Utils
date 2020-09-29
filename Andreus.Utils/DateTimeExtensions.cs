@@ -6,7 +6,7 @@ namespace Andreus.Utils
     /// <summary>
     /// Extensions for <see cref="DateTime"/>.
     /// </summary>
-    public static class DateTimeExtensions
+    public static partial class DateTimeExtensions
     {
         /// <summary>
         /// Converts the string representation of a date and time in a culture-independent format to its <see cref="DateTime"/> equivalent.

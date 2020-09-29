@@ -6,7 +6,7 @@ namespace Andreus.Utils
     /// <summary>
     /// Extensions for <see cref="DateTimeOffset"/>.
     /// </summary>
-    public static class DateTimeOffsetExtensions
+    public static partial class DateTimeOffsetExtensions
     {
         /// <summary>
         /// Converts the string representation of a date and time in a culture-independent format to its <see cref="DateTimeOffset"/> equivalent.

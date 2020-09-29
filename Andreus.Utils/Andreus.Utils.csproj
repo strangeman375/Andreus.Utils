@@ -36,6 +36,9 @@
     <Compile Include="Int16Extensions_netstandard2_1.cs" />
     <Compile Include="DoubleExtensions_netstandard2_1.cs" />
     <Compile Include="DecimalExtensions_netstandard2_1.cs" />
+    <Compile Include="TimeSpanExtensions_netstandard2_1.cs" />
+    <Compile Include="DateTimeOffsetExtensions_netstandard2_1.cs" />
+    <Compile Include="DateTimeExtensions_netstandard2_1.cs" />
   </ItemGroup>
 
 </Project>

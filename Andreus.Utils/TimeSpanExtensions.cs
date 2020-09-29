@@ -6,7 +6,7 @@ namespace Andreus.Utils
     /// <summary>
     /// Extensions for <see cref="TimeSpan"/>.
     /// </summary>
-    public static class TimeSpanExtensions
+    public static partial class TimeSpanExtensions
     {
         /// <summary>
         /// Converts the string representation of a time interval in a culture-independent format to its <see cref="TimeSpan"/> equivalent.
