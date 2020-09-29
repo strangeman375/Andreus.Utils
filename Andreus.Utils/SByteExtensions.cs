@@ -5,7 +5,7 @@ namespace Andreus.Utils
     /// <summary>
     /// Extensions for <see cref="sbyte"/>.
     /// </summary>
-    public static class SByteExtensions
+    public static partial class SByteExtensions
     {
         /// <summary>
         /// Converts the string representation of a number in a culture-independent format to its numeric equivalent.

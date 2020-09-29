@@ -5,7 +5,7 @@ namespace Andreus.Utils
     /// <summary>
     /// Extensions for <see cref="ushort"/>.
     /// </summary>
-    public static class UInt16Extensions
+    public static partial class UInt16Extensions
     {
         /// <summary>
         /// Converts the string representation of a number in a culture-independent format to its numeric equivalent.

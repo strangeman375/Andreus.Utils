@@ -5,7 +5,7 @@ namespace Andreus.Utils
     /// <summary>
     /// Extensions for <see cref="int"/>.
     /// </summary>
-    public static class Int32Extensions
+    public static partial class Int32Extensions
     {
         /// <summary>
         /// Converts the string representation of a number in a culture-independent format to its numeric equivalent.

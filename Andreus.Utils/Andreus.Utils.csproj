@@ -26,6 +26,16 @@
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
     <Compile Include="ByteExtensions_netstandard2_1.cs" />
+    <Compile Include="UInt64Extensions_netstandard2_1.cs" />
+    <Compile Include="UInt32Extensions_netstandard2_1.cs" />
+    <Compile Include="UInt16Extensions_netstandard2_1.cs" />
+    <Compile Include="SingleExtensions_netstandard2_1.cs" />
+    <Compile Include="SByteExtensions_netstandard2_1.cs" />
+    <Compile Include="Int64Extensions_netstandard2_1.cs" />
+    <Compile Include="Int32Extensions_netstandard2_1.cs" />
+    <Compile Include="Int16Extensions_netstandard2_1.cs" />
+    <Compile Include="DoubleExtensions_netstandard2_1.cs" />
+    <Compile Include="DecimalExtensions_netstandard2_1.cs" />
   </ItemGroup>
 
 </Project>

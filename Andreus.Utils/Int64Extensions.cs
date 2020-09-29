@@ -5,7 +5,7 @@ namespace Andreus.Utils
     /// <summary>
     /// Extensions for <see cref="long"/>.
     /// </summary>
-    public static class Int64Extensions
+    public static partial class Int64Extensions
     {
         /// <summary>
         /// Converts the string representation of a number in a culture-independent format to its numeric equivalent.

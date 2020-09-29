@@ -5,7 +5,7 @@ namespace Andreus.Utils
     /// <summary>
     /// Extensions for <see cref="decimal"/>.
     /// </summary>
-    public static class DecimalExtensions
+    public static partial class DecimalExtensions
     {
         /// <summary>
         /// Converts the string representation of a number in a culture-independent format to its numeric equivalent.

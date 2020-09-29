@@ -5,7 +5,7 @@ namespace Andreus.Utils
     /// <summary>
     /// Extensions for <see cref="float"/>.
     /// </summary>
-    public static class SingleExtensions
+    public static partial class SingleExtensions
     {
         private const NumberStyles DefaultParseNumberStyles = NumberStyles.Float | NumberStyles.AllowThousands;
 

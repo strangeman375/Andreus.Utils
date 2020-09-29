@@ -4,18 +4,18 @@ using System.Globalization;
 namespace Andreus.Utils
 {
     /// <summary>
-    /// Extensions for <see cref="byte"/>.
+    /// Extensions for <see cref="uint"/>.
     /// </summary>
-    public static partial class ByteExtensions
+    public static partial class UInt32Extensions
     {
         /// <summary>
         /// Converts the span representation of a number in a culture-independent format to its numeric equivalent.
         /// </summary>
         /// <param name="s">A span containing the characters representing the value to convert.</param>
         /// <returns>A numeric value that is equivalent to the number contained in span.</returns>
-        public static byte ParseInvariant(ReadOnlySpan<char> s)
+        public static uint ParseInvariant(ReadOnlySpan<char> s)
         {
-            return byte.Parse(s, NumberStyles.Integer, NumberFormatInfo.InvariantInfo);
+            return uint.Parse(s, NumberStyles.Integer, NumberFormatInfo.InvariantInfo);
         }
 
         /// <summary>
@@ -28,9 +28,9 @@ namespace Andreus.Utils
         /// or the default value if the conversion failed.
         /// </param>
         /// <returns>True if string was converted successfully, otherwise, false.</returns>
-        public static bool TryParseInvariant(ReadOnlySpan<char> s, out byte value)
+        public static bool TryParseInvariant(ReadOnlySpan<char> s, out uint value)
         {
-            return byte.TryParse(s, NumberStyles.Integer, NumberFormatInfo.InvariantInfo, out value);
+            return uint.TryParse(s, NumberStyles.Integer, NumberFormatInfo.InvariantInfo, out value);
         }
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace Andreus.Utils
         /// <param name="charsWritten">When this method returns, the number of characters that were written in destination.</param>
         /// <param name="format">A span containing the charactes that represent a standard or custom numeric format string.</param>
         /// <returns>True if the formatting was successful, otherwise, false.</returns>
-        public static bool TryFormatInvariant(this byte value, Span<char> destination, out int charsWritten, ReadOnlySpan<char> format = default)
+        public static bool TryFormatInvariant(this uint value, Span<char> destination, out int charsWritten, ReadOnlySpan<char> format = default)
         {
             return value.TryFormat(destination, out charsWritten, format, NumberFormatInfo.InvariantInfo);
         }

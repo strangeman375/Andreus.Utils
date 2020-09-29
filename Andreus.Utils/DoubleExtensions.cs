@@ -5,7 +5,7 @@ namespace Andreus.Utils
     /// <summary>
     /// Extensions for <see cref="double"/>.
     /// </summary>
-    public static class DoubleExtensions
+    public static partial class DoubleExtensions
     {
         private const NumberStyles DefaultParseNumberStyles = NumberStyles.Float | NumberStyles.AllowThousands;
 
