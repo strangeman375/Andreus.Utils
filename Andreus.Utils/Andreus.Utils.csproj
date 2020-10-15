@@ -19,6 +19,11 @@
     <Compile Include="Int64Extensions.cs" />
     <Compile Include="SByteExtensions.cs" />
     <Compile Include="SingleExtensions.cs" />
+    <Compile Include="StringExtensions\StringExtensions.EndsWith.cs" />
+    <Compile Include="StringExtensions\StringExtensions.Equals.cs" />
+    <Compile Include="StringExtensions\StringExtensions.IndexOf.cs" />
+    <Compile Include="StringExtensions\StringExtensions.LastIndexOf.cs" />
+    <Compile Include="StringExtensions\StringExtensions.StartsWith.cs" />
     <Compile Include="Text\IStringBuilderAppendable.cs" />
     <Compile Include="Text\StringBuilderExtensions.cs" />
     <Compile Include="TimeSpanExtensions.cs" />
