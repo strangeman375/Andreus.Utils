@@ -34,7 +34,7 @@ namespace Andreus.Utils.Text
         /// <param name="separator">The string to use as a separator.</param>
         /// <param name="values">A collection that contains the objects to concatenate and append to the current instance of the <see cref="StringBuilder"/>.</param>
         /// <returns>A reference to this instance after the append operation has completed.</returns>
-        public static StringBuilder AppendJoinValues<T>(this StringBuilder stringBuilder, string separator, IEnumerable<T> values)
+        public static StringBuilder AppendJoinValues<T>(this StringBuilder stringBuilder, string? separator, IEnumerable<T> values)
             where T : IStringBuilderAppendable
         {
             if (stringBuilder is null)

@@ -56,7 +56,11 @@ namespace Andreus.Utils
         /// or the default value if the conversion failed.
         /// </param>
         /// <returns>True if string was converted successfully, otherwise, false.</returns>
-        public static bool TryParseInvariant(string s, out TimeSpan value)
+        public static bool TryParseInvariant(
+#if NETSTANDARD2_1
+            [System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            string? s, out TimeSpan value)
         {
             return TimeSpan.TryParse(s, DateTimeFormatInfo.InvariantInfo, out value);
         }
@@ -75,7 +79,15 @@ namespace Andreus.Utils
         /// </param>
         /// <param name="styles">A bitwise combination of enumeration values that defines the style elements that may be present in string.</param>
         /// <returns>True if string was converted successfully, otherwise, false.</returns>
-        public static bool TryParseExactInvariant(string s, string format, out TimeSpan value, TimeSpanStyles styles = TimeSpanStyles.None)
+        public static bool TryParseExactInvariant(
+#if NETSTANDARD2_1
+            [System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            string? s,
+#if NETSTANDARD2_1
+            [System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            string? format, out TimeSpan value, TimeSpanStyles styles = TimeSpanStyles.None)
         {
             return TimeSpan.TryParseExact(s, format, DateTimeFormatInfo.InvariantInfo, styles, out value);
         }
@@ -94,7 +106,15 @@ namespace Andreus.Utils
         /// </param>
         /// <param name="styles">A bitwise combination of enumeration values that defines the style elements that may be present in string.</param>
         /// <returns>True if string was converted successfully, otherwise, false.</returns>
-        public static bool TryParseExactInvariant(string s, string[] formats, out TimeSpan value, TimeSpanStyles styles = TimeSpanStyles.None)
+        public static bool TryParseExactInvariant(
+#if NETSTANDARD2_1
+            [System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            string? s,
+#if NETSTANDARD2_1
+            [System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            string?[]? formats, out TimeSpan value, TimeSpanStyles styles = TimeSpanStyles.None)
         {
             return TimeSpan.TryParseExact(s, formats, DateTimeFormatInfo.InvariantInfo, styles, out value);
         }
@@ -106,7 +126,7 @@ namespace Andreus.Utils
         /// <param name="value">The <see cref="TimeSpan"/> value.</param>
         /// <param name="format">A standard or custom <see cref="TimeSpan"/> format string.</param>
         /// <returns>The string representation of the value, formatted as specified by the format parameter.</returns>
-        public static string ToStringInvariant(this TimeSpan value, string format)
+        public static string ToStringInvariant(this TimeSpan value, string? format)
         {
             return value.ToString(format, DateTimeFormatInfo.InvariantInfo);
         }

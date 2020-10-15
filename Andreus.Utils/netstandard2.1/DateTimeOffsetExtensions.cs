@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 
 namespace Andreus.Utils
@@ -114,7 +115,7 @@ namespace Andreus.Utils
         /// and that defines how to interpret the parsed date in relation to the current time zone or the current date.
         /// </param>
         /// <returns>True if span was converted successfully, otherwise, false.</returns>
-        public static bool TryParseExactInvariant(ReadOnlySpan<char> s, string[] formats, out DateTimeOffset value, DateTimeStyles styles = DateTimeStyles.None)
+        public static bool TryParseExactInvariant(ReadOnlySpan<char> s, [NotNullWhen(true)] string?[]? formats, out DateTimeOffset value, DateTimeStyles styles = DateTimeStyles.None)
         {
             return DateTimeOffset.TryParseExact(s, formats, DateTimeFormatInfo.InvariantInfo, styles, out value);
         }

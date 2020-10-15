@@ -70,7 +70,11 @@ namespace Andreus.Utils
         /// and that defines how to interpret the parsed date in relation to the current time zone or the current date.
         /// </param>
         /// <returns>True if string was converted successfully, otherwise, false.</returns>
-        public static bool TryParseInvariant(string s, out DateTimeOffset value, DateTimeStyles styles = DateTimeStyles.None)
+        public static bool TryParseInvariant(
+#if NETSTANDARD2_1
+            [System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            string? s, out DateTimeOffset value, DateTimeStyles styles = DateTimeStyles.None)
         {
             return DateTimeOffset.TryParse(s, DateTimeFormatInfo.InvariantInfo, styles, out value);
         }
@@ -92,7 +96,15 @@ namespace Andreus.Utils
         /// and that defines how to interpret the parsed date in relation to the current time zone or the current date.
         /// </param>
         /// <returns>True if string was converted successfully, otherwise, false.</returns>
-        public static bool TryParseExactInvariant(string s, string format, out DateTimeOffset value, DateTimeStyles styles = DateTimeStyles.None)
+        public static bool TryParseExactInvariant(
+#if NETSTANDARD2_1
+            [System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            string? s,
+#if NETSTANDARD2_1
+            [System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            string? format, out DateTimeOffset value, DateTimeStyles styles = DateTimeStyles.None)
         {
             return DateTimeOffset.TryParseExact(s, format, DateTimeFormatInfo.InvariantInfo, styles, out value);
         }
@@ -114,7 +126,15 @@ namespace Andreus.Utils
         /// and that defines how to interpret the parsed date in relation to the current time zone or the current date.
         /// </param>
         /// <returns>True if string was converted successfully, otherwise, false.</returns>
-        public static bool TryParseExactInvariant(string s, string[] formats, out DateTimeOffset value, DateTimeStyles styles = DateTimeStyles.None)
+        public static bool TryParseExactInvariant(
+#if NETSTANDARD2_1
+            [System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            string? s,
+#if NETSTANDARD2_1
+            [System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            string?[]? formats, out DateTimeOffset value, DateTimeStyles styles = DateTimeStyles.None)
         {
             return DateTimeOffset.TryParseExact(s, formats, DateTimeFormatInfo.InvariantInfo, styles, out value);
         }
@@ -137,7 +157,7 @@ namespace Andreus.Utils
         /// <param name="value">The <see cref="DateTimeOffset"/> value.</param>
         /// <param name="format">A standard or custom <see cref="DateTimeOffset"/> format string.</param>
         /// <returns>The string representation of the value, formatted as specified by the format parameter.</returns>
-        public static string ToStringInvariant(this DateTimeOffset value, string format)
+        public static string ToStringInvariant(this DateTimeOffset value, string? format)
         {
             return value.ToString(format, DateTimeFormatInfo.InvariantInfo);
         }

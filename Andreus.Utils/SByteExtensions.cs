@@ -27,7 +27,11 @@ namespace Andreus.Utils
         /// or the default value if the conversion failed.
         /// </param>
         /// <returns>True if string was converted successfully, otherwise, false.</returns>
-        public static bool TryParseInvariant(string s, out sbyte value)
+        public static bool TryParseInvariant(
+#if NETSTANDARD2_1
+            [System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            string? s, out sbyte value)
         {
             return sbyte.TryParse(s, NumberStyles.Integer, NumberFormatInfo.InvariantInfo, out value);
         }
@@ -50,7 +54,7 @@ namespace Andreus.Utils
         /// <param name="value">The numeric value.</param>
         /// <param name="format">A standard or custom numeric format string.</param>
         /// <returns>The string representation of the value, formatted as specified by the format parameter.</returns>
-        public static string ToStringInvariant(this sbyte value, string format)
+        public static string ToStringInvariant(this sbyte value, string? format)
         {
             return value.ToString(format, NumberFormatInfo.InvariantInfo);
         }

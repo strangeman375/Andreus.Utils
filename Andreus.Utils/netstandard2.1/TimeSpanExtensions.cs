@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 
 namespace Andreus.Utils
@@ -94,7 +95,7 @@ namespace Andreus.Utils
         /// </param>
         /// <param name="styles">A bitwise combination of enumeration values that defines the style elements that may be present in span.</param>
         /// <returns>True if span was converted successfully, otherwise, false.</returns>
-        public static bool TryParseExactInvariant(ReadOnlySpan<char> s, string[] formats, out TimeSpan value, TimeSpanStyles styles = TimeSpanStyles.None)
+        public static bool TryParseExactInvariant(ReadOnlySpan<char> s, [NotNullWhen(true)] string?[]? formats, out TimeSpan value, TimeSpanStyles styles = TimeSpanStyles.None)
         {
             return TimeSpan.TryParseExact(s, formats, DateTimeFormatInfo.InvariantInfo, styles, out value);
         }
